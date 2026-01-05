@@ -860,7 +860,7 @@
                             <i class="fas fa-truck"></i>
                             <div>
                                 <h4>Free Delivery</h4>
-                                <p>On orders over $25</p>
+                                <p>On orders over ₦25</p>
                             </div>
                         </div>
                     </div>
@@ -885,7 +885,7 @@
         <div class="cart-summary">
             <div class="cart-total">
                 <span>Total:</span>
-                <span id="cart-total">$0.00</span>
+                <span id="cart-total">₦0.00</span>
             </div>
             <button class="checkout-btn" id="checkout-btn">
                 <i class="fas fa-credit-card"></i> Checkout
@@ -955,7 +955,7 @@
                 id: 1,
                 name: "Margherita Classic",
                 description: "Fresh tomatoes, mozzarella cheese, and basil on our signature crust",
-                price: 12.99,
+                price: 1200.00,
                 icon: "fas fa-pizza-slice",
                 features: ["Vegetarian", "Family Size", "30 min"],
                 popular: true
@@ -964,7 +964,7 @@
                 id: 2,
                 name: "Pepperoni Supreme",
                 description: "Double pepperoni, mozzarella cheese, and tomato sauce",
-                price: 15.99,
+                price: 1500.99,
                 icon: "fas fa-bacon",
                 features: ["Spicy", "Meat Lovers", "35 min"],
                 popular: true
@@ -973,7 +973,7 @@
                 id: 3,
                 name: "BBQ Chicken",
                 description: "Grilled chicken, red onions, cilantro, and BBQ sauce",
-                price: 16.99,
+                price: 1600.99,
                 icon: "fas fa-drumstick-bite",
                 features: ["Gluten-Free", "Family Size", "40 min"]
             },
@@ -981,7 +981,7 @@
                 id: 4,
                 name: "Veggie Delight",
                 description: "Mushrooms, bell peppers, onions, olives, and tomatoes",
-                price: 14.99,
+                price: 1400.99,
                 icon: "fas fa-carrot",
                 features: ["Vegetarian", "Healthy", "30 min"]
             },
@@ -989,7 +989,7 @@
                 id: 5,
                 name: "Meat Feast",
                 description: "Pepperoni, sausage, ham, bacon, and ground beef",
-                price: 18.99,
+                price: 1800.99,
                 icon: "fas fa-hamburger",
                 features: ["Meat Lovers", "Extra Large", "45 min"],
                 popular: true
@@ -998,7 +998,7 @@
                 id: 6,
                 name: "Hawaiian Paradise",
                 description: "Ham, pineapple, and mozzarella cheese with tomato sauce",
-                price: 14.99,
+                price: 1400.99,
                 icon: "fas fa-pineapple",
                 features: ["Sweet & Savory", "Family Size", "30 min"]
             },
@@ -1006,7 +1006,7 @@
                 id: 7,
                 name: "Spicy Diablo",
                 description: "Spicy sausage, jalapeños, red peppers, and hot sauce",
-                price: 16.99,
+                price: 1600.99,
                 icon: "fas fa-pepper-hot",
                 features: ["Extra Spicy", "Meat Lovers", "35 min"]
             },
@@ -1014,7 +1014,7 @@
                 id: 8,
                 name: "Four Cheese",
                 description: "Mozzarella, parmesan, cheddar, and gorgonzola cheeses",
-                price: 15.99,
+                price: 1500.99,
                 icon: "fas fa-cheese",
                 features: ["Vegetarian", "Extra Cheese", "30 min"]
             }
@@ -1094,7 +1094,7 @@
                         <div class="pizza-features">
                             ${pizza.features.map(feature => `<span>${feature}</span>`).join('')}
                         </div>
-                        <div class="pizza-price">$${pizza.price.toFixed(2)}</div>
+                        <div class="pizza-price">₦${pizza.price.toFixed(2)}</div>
                         <button class="add-to-cart" data-id="${pizza.id}">
                             <i class="fas fa-cart-plus"></i> Add to Cart
                         </button>
@@ -1163,7 +1163,7 @@
                         <p>Add some delicious pizza to get started!</p>
                     </div>
                 `;
-                cartTotalEl.textContent = '$0.00';
+                cartTotalEl.textContent = '₦0.00';
                 return;
             }
             
@@ -1179,7 +1179,7 @@
                     </div>
                     <div class="cart-item-info">
                         <div class="cart-item-name">${item.name}</div>
-                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                        <div class="cart-item-price">₦${item.price.toFixed(2)}</div>
                         <div class="cart-item-controls">
                             <button class="quantity-btn" data-index="${index}" data-action="decrease">-</button>
                             <span class="cart-item-quantity">${item.quantity}</span>
@@ -1194,7 +1194,7 @@
                 cartItems.appendChild(cartItem);
             });
             
-            cartTotalEl.textContent = `$${cartTotal.toFixed(2)}`;
+            cartTotalEl.textContent = `₦${cartTotal.toFixed(2)}`;
             
             // Add event listeners for quantity buttons
             document.querySelectorAll('.quantity-btn').forEach(button => {
